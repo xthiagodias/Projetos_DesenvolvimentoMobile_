@@ -1,0 +1,26 @@
+<resources>
+    <string name="qualOperadora">Escolha uma Operadora</string>
+    <string-array name="operadoras">
+        <item>Escolha uma Operadora</item>
+        <item>OP1</item>
+        <item>OP2</item>
+        <item>OP3</item>
+
+    </string-array>
+
+
+    <string name="qualPlaneta">Escolha um Planeta</string>
+    <string-array name="planetas">
+        <item>Escolha um Planeta</item>
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Marte</item>
+        <item>Jupiter</item>
+        <item>Saturno</item>
+        <item>Urano</item>
+    </string-array>
+
+
+</resources>
+
+
