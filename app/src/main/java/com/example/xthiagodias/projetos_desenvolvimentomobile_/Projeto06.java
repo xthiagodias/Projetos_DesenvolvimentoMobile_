@@ -1,4 +1,4 @@
-package com.example.a26146152.exercicio1;
+package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class Projeto06 extends AppCompatActivity {
     private Button categoria;
     private TextInputEditText idade;
     private TextView resultado;

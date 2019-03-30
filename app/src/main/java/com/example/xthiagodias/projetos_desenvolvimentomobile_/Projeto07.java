@@ -7,14 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Ex10 extends AppCompatActivity {
+public class Projeto07 extends AppCompatActivity {
     private Button calcular;
     private TextInputEditText valorConta,nomeCliente;
     private TextView resultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ex10);
+        setContentView(R.layout.activity_projeto07);
 
         calcular = findViewById(R.id.btCalcular);
         nomeCliente = findViewById(R.id.txtNome);

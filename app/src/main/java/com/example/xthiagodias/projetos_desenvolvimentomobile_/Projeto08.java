@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GASAPP extends AppCompatActivity {
+public class Projeto08 extends AppCompatActivity {
 
     private TextInputEditText Modelo;
     private TextInputEditText Distancia;
     private TextInputEditText Potencia;
     private TextInputEditText Gasolina;
+    double valorGasto;
 
     private Button Calcular;
 
@@ -21,7 +22,7 @@ public class GASAPP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gasapp);
+        setContentView(R.layout.activity_projeto08);
 
         Modelo = findViewById(R.id.inputModelo);
         Distancia = findViewById(R.id.inputDistancia);
@@ -46,6 +47,27 @@ public class GASAPP extends AppCompatActivity {
 
                 Double valorGasolina = Double.parseDouble(Gasolina.getText().toString());
                 i.putExtra("Gasolina", valorGasolina);
+
+                if( potenciaCarro <= 1.0 ){
+                    valorGasto = (distanciaPercorrida/13.00)*valorGasolina;
+                    i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                }else{
+                    if( potenciaCarro >1.0 && potenciaCarro<=1.4){
+                        valorGasto = (distanciaPercorrida/11.00)*valorGasolina;
+                        i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+
+                    }else{
+                        if( potenciaCarro >1.4 && potenciaCarro <= 1.9){
+                            valorGasto = (distanciaPercorrida/9.50)*valorGasolina;
+                            i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                        }else{
+                            if(potenciaCarro > 1.9 ){
+                                valorGasto = (distanciaPercorrida/7.75)*valorGasolina;
+                                i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                            }
+                        }
+                    }
+                }
 
 
                 startActivity(i);
