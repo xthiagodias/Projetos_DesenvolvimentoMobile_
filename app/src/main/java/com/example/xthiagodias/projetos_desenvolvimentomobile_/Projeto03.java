@@ -1,5 +1,6 @@
 package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.*;
 public class Projeto03 extends AppCompatActivity {
 
     private Button calcular;
-    private TextInputLayout PesoTerra;
+    private TextInputEditText PesoTerra;
     private TextView resultado;
     double res;
     private Spinner planetas;
@@ -100,7 +101,7 @@ public class Projeto03 extends AppCompatActivity {
                 }
 
 
-                double peso = Double.parseDouble(PesoTerra.getEditText().toString());
+                double peso = Double.parseDouble(PesoTerra.getText().toString());
 
 
                 itemEscolhido = planetas.getSelectedItem().toString();

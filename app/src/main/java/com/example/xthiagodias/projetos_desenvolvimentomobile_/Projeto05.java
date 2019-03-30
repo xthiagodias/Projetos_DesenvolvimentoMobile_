@@ -1,5 +1,6 @@
 package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,9 +12,9 @@ import android.widget.Toast;
 public class Projeto05 extends AppCompatActivity {
 
     private Button calcularMedia;
-    private TextInputLayout nome;
-    private TextInputLayout AV1;
-    private TextInputLayout AV2;
+    private TextInputEditText nome;
+    private TextInputEditText AV1;
+    private TextInputEditText AV2;
     private TextView resultadoNome;
     private TextView resultadoMedia;
     private TextView resultadoStatus;
@@ -58,9 +59,9 @@ public class Projeto05 extends AppCompatActivity {
                 }
 
 
-                        double valorAV1 = Double.parseDouble(AV1.getEditText().toString());
-                        double valorAV2 = Double.parseDouble(AV2.getEditText().toString());
-                        String nomeAluno = nome.getEditText().toString();
+                        double valorAV1 = Double.parseDouble(AV1.getText().toString());
+                        double valorAV2 = Double.parseDouble(AV2.getText().toString());
+                        String nomeAluno = nome.getText().toString();
 
                         media = (valorAV1+valorAV2)/2;
 
@@ -88,7 +89,7 @@ public class Projeto05 extends AppCompatActivity {
                         }
 
                        resultadoNome.setText("Nome do Aluno: " + nomeAluno);
-                       resultadoMedia.setText("Media do Aluno: " + media);
+                       resultadoMedia.setText("Média do Aluno: " + media);
                        resultadoStatus.setText(status);
 
                     }

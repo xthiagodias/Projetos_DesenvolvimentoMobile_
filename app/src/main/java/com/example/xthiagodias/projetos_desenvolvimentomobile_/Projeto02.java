@@ -1,5 +1,6 @@
 package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ public class Projeto02 extends AppCompatActivity {
 
 
     private Button calcular;
-    private TextInputLayout tempoLigacao;
+    private TextInputEditText tempoLigacao;
     private TextView resultado;
     double res;
     private Spinner operadoras;
@@ -60,7 +61,7 @@ public class Projeto02 extends AppCompatActivity {
 
 
 
-                double tempo = Double.parseDouble(tempoLigacao.getEditText().toString());
+                double tempo = Double.parseDouble(tempoLigacao.getText().toString());
 
 
                 if (tempo > 0.05) {
@@ -68,21 +69,21 @@ public class Projeto02 extends AppCompatActivity {
                     if (itemEscolhido.equals("OP1")) {
 
                         res = (tempo/60) * 0.020;
-                        resultado.setText("Valor da Tarifa: R$" + res);
+                        resultado.setText("Valor da Tarífa: R$" + res);
 
                     } else {
 
                         if (itemEscolhido.equals("OP2")) {
 
                             res = (tempo/60) * 0.025;
-                            resultado.setText("Valor da Tarifa: R$" + res);
+                            resultado.setText("Valor da Tarífa: R$" + res);
 
                         } else {
 
                             if (itemEscolhido.equals("OP3")) {
 
                                 res = (tempo/60) * 0.019;
-                                resultado.setText("Valor da Tarifa: R$" + res);
+                                resultado.setText("Valor da Tarífa: R$" + res);
 
 
                             } else {
@@ -96,7 +97,7 @@ public class Projeto02 extends AppCompatActivity {
                     }
 
                 } else {
-                    resultado.setText("Tempo de 5 segundos, nao tarifado!");
+                    resultado.setText("Tempo de 5 segundos, nao tarífado!");
                 }
 
 
@@ -106,7 +107,7 @@ public class Projeto02 extends AppCompatActivity {
     }
 
     protected void EnviaAlertaTempo() {
-        Toast.makeText(getApplicationContext(),"Informe o Tempo da Ligacao!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Informe o Tempo da Ligação!", Toast.LENGTH_LONG).show();
     }
 
     protected void EnviaAlertaOperadora() {

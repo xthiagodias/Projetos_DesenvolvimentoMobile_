@@ -28,7 +28,7 @@ public class Projeto08 extends AppCompatActivity {
         Distancia = findViewById(R.id.inputDistancia);
         Potencia = findViewById(R.id.inputPotencia);
         Gasolina = findViewById(R.id.inputGasolina);
-        Calcular = findViewById(R.id.btCalcular);
+        Calcular = findViewById(R.id.btCalcularPeso);
 
 
         Calcular.setOnClickListener(new View.OnClickListener() {

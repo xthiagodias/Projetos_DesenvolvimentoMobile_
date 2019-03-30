@@ -1,5 +1,6 @@
 package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class Projeto04 extends AppCompatActivity {
 
     private Button calcular;
-    private TextInputLayout valorX;
+    private TextInputEditText valorX;
     private TextView resultado;
     double res;
 
@@ -38,7 +39,7 @@ public class Projeto04 extends AppCompatActivity {
 
                 } else {
 
-                    double valorDeX = Double.parseDouble(valorX.getEditText().toString());
+                    double valorDeX = Double.parseDouble(valorX.getText().toString());
 
                     double y = (8) / (2 - valorDeX);
 

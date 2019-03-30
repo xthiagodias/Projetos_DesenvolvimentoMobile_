@@ -33,26 +33,26 @@ public class Projeto06 extends AppCompatActivity {
 
         if ( i == 5 && i <= 7 ) {
 
-            resultado.setText("Infantil A");
+            resultado.setText("Categoria: Infantil A - Idade: " +i);
 
 
         } else {
 
             if ( i == 8 && i <=10){
-                resultado.setText("Infantil B");
+                resultado.setText("Categoria: Infantil B - Idade: " +i);
 
             }else{
 
                 if( i == 11 && i <=13){
-                    resultado.setText("Juvenil A");
+                    resultado.setText("Categoria: Juvenil A - Idade: " +i);
 
                 }else{
                     if(i == 14 && i <=17){
-                        resultado.setText("Juvenil B");
+                        resultado.setText("Categoria: Juvenil B - Idade: " +i);
 
                     }else{
                         if(i >=18){
-                            resultado.setText("Sênior");
+                            resultado.setText("Categoria: Sênior - Idade: " +i);
                         }
 
                     }

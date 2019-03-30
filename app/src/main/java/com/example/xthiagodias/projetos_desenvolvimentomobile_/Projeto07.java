@@ -11,12 +11,13 @@ public class Projeto07 extends AppCompatActivity {
     private Button calcular;
     private TextInputEditText valorConta,nomeCliente;
     private TextView resultado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projeto07);
 
-        calcular = findViewById(R.id.btCalcular);
+        calcular = findViewById(R.id.btCalcularPeso);
         nomeCliente = findViewById(R.id.txtNome);
         valorConta = findViewById(R.id.txtValor);
         resultado = findViewById(R.id.Resultado);
@@ -34,7 +35,7 @@ public class Projeto07 extends AppCompatActivity {
 
                   double valorDesconto = conta * 0.3;
 
-                  resultado.setText(String.valueOf("Resultado:R$ " +(conta-valorDesconto)));
+                  resultado.setText(String.valueOf("Resultado: R$ " +(conta-valorDesconto)));
               }else{
                   resultado.setText(String.valueOf("Que pena! Nesta semana o desconto não é para seu nome; mas continue nos prestigiando que sua vez chegará!" ));
               }

@@ -1,5 +1,6 @@
 package com.example.xthiagodias.projetos_desenvolvimentomobile_;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,10 +12,10 @@ import android.widget.Toast;
 public class Projeto01 extends AppCompatActivity {
 
 
-    private Button calcular;
-    private TextInputLayout altura;
-    private TextInputLayout sexo;
-    private TextView resultado;
+    private Button calcularPeso;
+    private TextInputEditText alturaPessoa;
+    private TextInputEditText sexoPessoa;
+    private TextView resultadoPeso;
 
 
 
@@ -24,48 +25,48 @@ public class Projeto01 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projeto01);
 
-        calcular = findViewById(R.id.btCalcular);
-        altura = findViewById(R.id.inputAltura);
-        sexo = findViewById(R.id.inputSexo);
-        resultado = findViewById(R.id.idResultado);
+        calcularPeso = findViewById(R.id.btCalcularPeso);
+        alturaPessoa = findViewById(R.id.inputAlturaPessoa);
+        sexoPessoa = findViewById(R.id.inputSexoPessoa);
+        resultadoPeso = findViewById(R.id.idResultadoPeso);
 
 
-        calcular.setOnClickListener(new View.OnClickListener() {
+        calcularPeso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-              double vlrAltura = Double.parseDouble(altura.getEditText().toString());
+              double vlrAltura = Double.parseDouble(alturaPessoa.getText().toString());
 
-                sexo.getEditText().toString();
+             String MF = sexoPessoa.getText().toString();
+             String alt = alturaPessoa.getText().toString();
 
 
-
-                if (altura.equals("")) {
-                    altura.requestFocus();
+                if (alt.equals("")) {
+                    alturaPessoa.requestFocus();
                     EnviaAlertaAltura();
                 }
 
 
-                if (sexo.equals("")) {
-                    sexo.requestFocus();
+                if (MF.equals("")) {
+                    sexoPessoa.requestFocus();
                     EnviaAlertaSexo();
                 }
 
 
-                if (sexo.equals("M")) {
+                if (MF.equals("M")) {
 
                     double res = (72.7 * vlrAltura) - 58;
 
-                    resultado.setText("O Peso ideal para o Sexo Masculino e: " +res);
+                    resultadoPeso.setText("O Peso ideal para o Sexo Masculino é: " +res);
 
 
                 }
 
-                if (sexo.equals("F")) {
+                if (MF.equals("F")) {
 
                     double res = (62.1 * vlrAltura) - 44.7;
 
-                    resultado.setText("O Peso ideal para o Sexo Feminino e: " +res);
+                    resultadoPeso.setText("O Peso ideal para o Sexo Feminino é: " +res);
 
 
                 }
