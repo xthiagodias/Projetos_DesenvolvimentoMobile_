@@ -3,7 +3,6 @@
           package="com.example.xthiagodias.projetos_desenvolvimentomobile_">
 
     <application
-            android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="Projetos Desenvolvimento Mobile"
             android:roundIcon="@mipmap/ic_launcher_round"
@@ -85,6 +84,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Resultado" >
+        </activity>
+
+        <activity android:name=".OutraJanela" >
         </activity>
 
     </application>
