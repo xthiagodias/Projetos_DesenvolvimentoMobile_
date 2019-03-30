@@ -5,6 +5,51 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Projeto06">
+        tools:context=".MainActivity">
 
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayout" android:layout_marginTop="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Idade" android:id="@+id/txtIdade"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+            android:text="Entre Com a Idade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout" android:layout_marginTop="76dp"/>
+    <TextView
+            android:text="Exercicio9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" android:textSize="24sp"
+            android:textColor="@android:color/black" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="VER CATEGORIA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt" android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="CATEGORIA"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:id="@+id/idCategoria" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="116dp"
+            app:layout_constraintTop_toBottomOf="@+id/bt" android:textSize="24sp"/>
 </android.support.constraint.ConstraintLayout>

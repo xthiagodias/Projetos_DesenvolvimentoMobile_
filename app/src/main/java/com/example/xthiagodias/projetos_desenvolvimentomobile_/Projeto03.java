@@ -22,7 +22,7 @@ public class Projeto03 extends AppCompatActivity {
         setContentView(R.layout.activity_projeto03);
 
         calcular = findViewById(R.id.btCalcularPeso);
-        PesoTerra = findViewById(R.id.inputPeso);
+        PesoTerra = findViewById(R.id.inputPesoTerra);
         resultado = findViewById(R.id.idResultadoPeso);
         planetas = findViewById(R.id.spinner2);
 
