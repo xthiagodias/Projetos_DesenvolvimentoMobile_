@@ -12,7 +12,7 @@ public class Projeto03 extends AppCompatActivity {
     private Button calcular;
     private TextInputEditText PesoTerra;
     private TextView resultado;
-    double res;
+    private double res;
     private Spinner planetas;
     private String itemEscolhido;
     private double gravidade;
@@ -67,7 +67,7 @@ public class Projeto03 extends AppCompatActivity {
                                         gravidade = 1.17;
                                     } else {
 
-                                        if (itemEscolhido.equals("")) {
+                                        if (itemEscolhido.equals("Escolha um Planeta")) {
 
                                             EnviaAlertaPlaneta();
                                             resultado.setText("Escolha um Planela!");
@@ -92,10 +92,10 @@ public class Projeto03 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // double vlrTempo = Double.parseDouble(tempoLigacao.getEditText().toString());
+                 String PesoT = PesoTerra.getText().toString();
 
 
-                if (PesoTerra.equals("")) {
+                if (PesoT.equals("")) {
                     PesoTerra.requestFocus();
                     EnviaAlertaPeso();
                 }
@@ -112,7 +112,7 @@ public class Projeto03 extends AppCompatActivity {
                     gravidade = 0.37;
 
                     res = (peso/10) * gravidade;
-                    resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                    resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
 
                 } else {
 
@@ -120,7 +120,7 @@ public class Projeto03 extends AppCompatActivity {
 
                         gravidade = 0.88;
                         res = (peso/10) * gravidade;
-                        resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                        resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
 
                     } else {
 
@@ -128,7 +128,7 @@ public class Projeto03 extends AppCompatActivity {
 
                             gravidade = 0.38;
                             res = (peso/10) * gravidade;
-                            resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                            resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
 
                         } else {
 
@@ -136,24 +136,24 @@ public class Projeto03 extends AppCompatActivity {
 
                                 gravidade = 2.64;
                                 res = (peso/10) * gravidade;
-                                resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                                resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
                             } else {
 
                                 if (itemEscolhido.equals("Saturno")) {
 
                                     gravidade = 1.15;
                                     res = (peso/10) * gravidade;
-                                    resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                                    resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
                                 } else {
 
                                     if (itemEscolhido.equals("Urano")) {
 
                                         gravidade = 1.17;
                                         res = (peso/10) * gravidade;
-                                        resultado.setText("O Peso no Planeta, " +itemEscolhido +" e: " +res);
+                                        resultado.setText("O Peso no Planeta, " +itemEscolhido +" é: " +res);
                                     } else {
 
-                                        if (itemEscolhido.equals("")) {
+                                        if (itemEscolhido.equals("Escolha um Planeta")) {
 
                                             EnviaAlertaPlaneta();
                                             resultado.setText("Escolha um Planela!");

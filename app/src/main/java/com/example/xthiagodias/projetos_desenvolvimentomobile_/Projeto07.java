@@ -29,6 +29,8 @@ public class Projeto07 extends AppCompatActivity {
           public void onClick(View view) {
 
               double conta = Double.parseDouble(valorConta.getText().toString());
+
+              //Pega Letra Inicial do nome informado!
               String nome = nomeCliente.getText().toString().charAt(0)+"";
 
               if(nome.equals("A") || nome.equals("E") || nome.equals("I") || nome.equals("O") || nome.equals("U")){

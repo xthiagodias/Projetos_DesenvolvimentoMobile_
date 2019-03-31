@@ -14,7 +14,6 @@ public class Projeto04 extends AppCompatActivity {
     private Button calcular;
     private TextInputEditText valorX;
     private TextView resultado;
-    double res;
 
 
     @Override
@@ -32,16 +31,18 @@ public class Projeto04 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String ValordoX = valorX.getText().toString();
 
-                if (valorX.equals("")) {
+
+                if (ValordoX.equals("")) {
                     valorX.requestFocus();
                     EnviaAlertaX();
 
                 } else {
 
-                    double valorDeX = Double.parseDouble(valorX.getText().toString());
+                    double valordeX = Double.parseDouble(valorX.getText().toString());
 
-                    double y = (8) / (2 - valorDeX);
+                    double y = (8) / (2 - valordeX);
 
                     resultado.setText("O resultado de Y: " + y);
 

@@ -13,7 +13,7 @@ public class Projeto02 extends AppCompatActivity {
     private Button calcular;
     private TextInputEditText tempoLigacao;
     private TextView resultado;
-    double res;
+    private double res;
     private Spinner operadoras;
     private String itemEscolhido;
 
@@ -49,12 +49,12 @@ public class Projeto02 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               // double vlrTempo = Double.parseDouble(tempoLigacao.getEditText().toString());
+                String tempoLig = tempoLigacao.getText().toString();
 
 
 
 
-                if (tempoLigacao.equals("")) {
+                if (tempoLig.equals("")) {
                     tempoLigacao.requestFocus();
                     EnviaAlertaTempo();
                 }
@@ -87,7 +87,7 @@ public class Projeto02 extends AppCompatActivity {
 
 
                             } else {
-                                if (itemEscolhido.equals("")) {
+                                if (itemEscolhido.equals("Escolha uma Operadora")) {
                                     resultado.setText("Escolha uma Operadora!");
                                     operadoras.requestFocus();
                                     EnviaAlertaOperadora();

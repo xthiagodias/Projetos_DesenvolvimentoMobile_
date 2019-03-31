@@ -18,8 +18,8 @@ public class Projeto05 extends AppCompatActivity {
     private TextView resultadoNome;
     private TextView resultadoMedia;
     private TextView resultadoStatus;
-    String status;
-    double media;
+    private String status;
+    private double media;
 
 
     @Override
@@ -40,19 +40,23 @@ public class Projeto05 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String QualNome = nome.getText().toString();
+                String NotaAV1 = AV1.getText().toString();
+                String NotaAV2 = AV2.getText().toString();
 
-                if (nome.equals("")) {
+
+                if (QualNome.equals("")) {
                     nome.requestFocus();
                     EnviaAlertaNome();
 
                 } else {
 
-                if (AV1.equals("")) {
+                if (NotaAV1.equals("")) {
                     AV1.requestFocus();
                     EnviaAlertaAV1();
                 } else {
 
-                    if (AV2.equals("")) {
+                    if (NotaAV2.equals("")) {
                         AV2.requestFocus();
                         EnviaAlertaAV2();
                     }
