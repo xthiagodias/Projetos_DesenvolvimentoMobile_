@@ -53,7 +53,7 @@ public class Projeto01 extends AppCompatActivity {
                 }
 
 
-                if (MF.equals("M")) {
+                if (MF.equals("m")) {
 
                     double res = (72.7 * vlrAltura) - 58;
 
@@ -62,7 +62,7 @@ public class Projeto01 extends AppCompatActivity {
 
                 }
 
-                if (MF.equals("F")) {
+                if (MF.equals("f")) {
 
                     double res = (62.1 * vlrAltura) - 44.7;
 

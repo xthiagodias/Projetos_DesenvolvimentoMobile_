@@ -18,7 +18,7 @@ public class Projeto06 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_projeto06);
 
         categoria = findViewById(R.id.bt);
         idade = findViewById(R.id.txtIdade);
@@ -31,28 +31,28 @@ public class Projeto06 extends AppCompatActivity {
 
         double i = Double.parseDouble(idade.getText().toString());
 
-        if ( i == 5 && i <= 7 ) {
+        if ( i == 5 || i <= 7 ) {
 
-            resultado.setText("Categoria: Infantil A - Idade: " +i);
+            resultado.setText("Infantil A - Idade: " +i);
 
 
         } else {
 
-            if ( i == 8 && i <=10){
-                resultado.setText("Categoria: Infantil B - Idade: " +i);
+            if ( i == 8 || i <=10){
+                resultado.setText("Infantil B - Idade: " +i);
 
             }else{
 
-                if( i == 11 && i <=13){
-                    resultado.setText("Categoria: Juvenil A - Idade: " +i);
+                if( i == 11 || i <=13){
+                    resultado.setText("Juvenil A - Idade: " +i);
 
                 }else{
-                    if(i == 14 && i <=17){
-                        resultado.setText("Categoria: Juvenil B - Idade: " +i);
+                    if(i == 14 || i <=17){
+                        resultado.setText("Juvenil B - Idade: " +i);
 
                     }else{
-                        if(i >=18){
-                            resultado.setText("Categoria: Sênior - Idade: " +i);
+                        if(i >= 18){
+                            resultado.setText("Sênior - Idade: " +i);
                         }
 
                     }

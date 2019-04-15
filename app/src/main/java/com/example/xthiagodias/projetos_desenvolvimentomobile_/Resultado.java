@@ -34,7 +34,7 @@ public class Resultado extends AppCompatActivity {
         Distancia.setText(String.valueOf(dados.getDouble("Distancia")));
         Potencia.setText(String.valueOf(dados.getDouble("Potencia")));
         Gasolina.setText(String.valueOf(dados.getDouble("Gasolina")));
-        valorGasto.setText(String.valueOf(dados.getDouble("valorGasto")));
+        valorGasto.setText(dados.getString("VG"));
 
 
             Compartilhar.setOnClickListener(new View.OnClickListener() {

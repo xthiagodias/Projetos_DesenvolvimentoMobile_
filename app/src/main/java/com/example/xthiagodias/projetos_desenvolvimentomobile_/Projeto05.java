@@ -81,7 +81,7 @@ public class Projeto05 extends AppCompatActivity {
 
                         } else {
 
-                        if (media == 4 && media < 7)  {
+                        if (media < 7 || media == 4)  {
 
                             double mediaProvaFinal = media;
                             status = "Aluno vai para Final!";

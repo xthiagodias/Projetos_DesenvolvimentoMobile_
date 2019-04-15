@@ -14,7 +14,9 @@ public class Projeto08 extends AppCompatActivity {
     private TextInputEditText Potencia;
     private TextInputEditText Gasolina;
     double valorGasto;
-
+    double potenciaCarro;
+    double distanciaPercorrida;
+    double valorGasolina;
     private Button Calcular;
 
 
@@ -39,31 +41,31 @@ public class Projeto08 extends AppCompatActivity {
 
                 i.putExtra("Modelo", Modelo.getText().toString());
 
-                Double distanciaPercorrida = Double.parseDouble(Distancia.getText().toString());
+                distanciaPercorrida = Double.parseDouble(Distancia.getText().toString());
                 i.putExtra("Distancia", distanciaPercorrida);
 
-                Double potenciaCarro = Double.parseDouble(Potencia.getText().toString());
+                potenciaCarro = Double.parseDouble(Potencia.getText().toString());
                 i.putExtra("Potencia", potenciaCarro);
 
-                Double valorGasolina = Double.parseDouble(Gasolina.getText().toString());
+                valorGasolina = Double.parseDouble(Gasolina.getText().toString());
                 i.putExtra("Gasolina", valorGasolina);
 
                 if( potenciaCarro <= 1.0 ){
                     valorGasto = (distanciaPercorrida/13.00)*valorGasolina;
-                    i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                    i.putExtra("VG", "Valor total gasto: " +valorGasto);
                 }else{
-                    if( potenciaCarro >1.0 && potenciaCarro<=1.4){
+                    if( potenciaCarro > 1.0 || potenciaCarro <=1.4){
                         valorGasto = (distanciaPercorrida/11.00)*valorGasolina;
-                        i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                        i.putExtra("VG", "Valor total gasto: " +valorGasto);
 
                     }else{
-                        if( potenciaCarro >1.4 && potenciaCarro <= 1.9){
+                        if( potenciaCarro > 1.4 || potenciaCarro <= 1.9){
                             valorGasto = (distanciaPercorrida/9.50)*valorGasolina;
-                            i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                            i.putExtra("VG", "Valor total gasto: " +valorGasto);
                         }else{
                             if(potenciaCarro > 1.9 ){
                                 valorGasto = (distanciaPercorrida/7.75)*valorGasolina;
-                                i.putExtra("valorGasto", "Valor Total gasto: " +valorGasto);
+                                i.putExtra("VG", "Valor total gasto: " +valorGasto);
                             }
                         }
                     }
